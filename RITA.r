@@ -4,6 +4,8 @@ library("dplyr")   # Data sorting
 
 # Read database from the dir where the file is
 datos <- read.csv("BD_RITA05 - BD_RITA05.csv", sep = ",", header = TRUE, encoding = "UTF-8")
+# Filter the dataset for the desired year -> 2022
+desired_year <- 2022
 
 
 # Number of publications per year
@@ -33,8 +35,6 @@ ggplotly(g)
 
 datos_tmp <- datos
 
-# Filter the dataset for the desired year -> 2022
-desired_year <- 2022
 datos_year <- datos_tmp %>%
   filter(year == desired_year)
 
@@ -50,9 +50,6 @@ publications_per_author <- authors_split %>%
   summarize(publications = n())
 
 publications_per_author
-
-# Specify the desired year
-desired_year <- 2022  # Change this to the year you're interested in
 
 # Filter the data for the desired year
 data_year <- datos %>%
@@ -76,8 +73,6 @@ print(result)
 
 datos_tmp <- datos
 
-# Filter the dataset for the desired year (e.g., 2022)
-desired_year <- 2022
 datos_year <- datos_tmp %>%
   filter(year == desired_year)
 
