@@ -3,7 +3,7 @@ library("plotly")  # Grapgh Library
 library("dplyr")   # Data sorting
 
 # Read database from the dir where the file is
-datos <- read.csv("BD_RITA04.csv", sep = ",", header = TRUE, encoding = "UTF-8")
+datos <- read.csv("BD_RITA_CONSOLIDATED_updated.csv", sep = ",", header = TRUE, encoding = "UTF-8")
 # Filter the dataset for the desired year -> 2022
 desired_year <- 2022
 
